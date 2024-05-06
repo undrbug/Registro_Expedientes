@@ -1,3 +1,14 @@
+:root {
+    --primary: #605DFF;
+    --primary-dark: #4a00e0;
+    --primary-light: #5DA8FF;
+    --secondary: #1D1D1D;
+    --social-background: #E9E9E9;
+    --social-background-hover: #dddddd;
+    --text: #1F2346;
+    --white: #FFFFFF;
+    --violet: #a99cfc;
+}
 /* * {
     margin: 10px;
     padding: 0;
@@ -7,6 +18,18 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f5f5f5;
+
+    background: var(--violet);
+    background: -webkit-linear-gradient(to right, var(--violet),
+            var(--primary-dark));
+    background: linear-gradient(to right, var(--violet),
+            var(--primary-dark));
+}
+
+h1 {
+    text-align: center;
+    margin-top: 100px;
+
 }
 
 form {

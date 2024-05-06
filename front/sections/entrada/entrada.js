@@ -1,5 +1,11 @@
 // import { getData } from "../../cargaDatos.js";
 
+let fecha = new Date();
+let year = fecha.getFullYear();
+let month = fecha.getMonth();
+let day = fecha.getDate();
+let formattedDate = `${year}-${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`;
+let inputFecha = document.getElementById('ingreso');
 let caratula = document.getElementById('caratula');
 let area = document.getElementById('area');
 let localidad = document.getElementById('localidad');
@@ -25,6 +31,9 @@ window.onload = async () => {
   }
   const data_localidad = await response2.json();
   cargarSelect(data_localidad, "localidad")
+  
+  //inserto la fecha actual en el input
+  inputFecha.value = formattedDate;
 }
 
 
